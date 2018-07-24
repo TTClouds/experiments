@@ -1,0 +1,1 @@
+docker run -it --rm --name streamlio-sandbox -p 6650:6650 -p 8080:8080 -p 8000:8000 streamlio/sandbox
