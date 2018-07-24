@@ -1,0 +1,1 @@
+helm install --name zookeeper3 --namespace testing --set replicaCount=3 incubator/zookeeper
