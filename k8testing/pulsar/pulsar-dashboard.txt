@@ -1,0 +1,127 @@
+[
+    {
+        "Id": "sha256:c16c15ff0ed1bfe2e9370c75654761fe49ccccac5a1c9858d0fae9dd59d57466",
+        "RepoTags": [
+            "apachepulsar/pulsar-dashboard:2.0.1-incubating",
+            "apachepulsar/pulsar-dashboard:latest"
+        ],
+        "RepoDigests": [
+            "apachepulsar/pulsar-dashboard@sha256:066b82b0e22c4ba97f083e91d2f295eb8a3c638d846968d42da59a654cf5488a"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2018-06-19T08:04:00.9814679Z",
+        "Container": "40132431c6d095fac2fb0719af635d6b57a68b3072985a09430c735c01f0f778",
+        "ContainerConfig": {
+            "Hostname": "40132431c6d0",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "PYTHONIOENCODING=UTF-8",
+                "GPG_KEY=C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF",
+                "PYTHON_VERSION=2.7.15",
+                "PYTHON_PIP_VERSION=10.0.1"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"supervisord\" \"-n\"]"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:f059272c1693d39df0d2d134671fef91c753ef085cc830508a16f9af41cc752e",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": [],
+            "Labels": {}
+        },
+        "DockerVersion": "18.03.1-ce",
+        "Author": "Pulsar",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "PYTHONIOENCODING=UTF-8",
+                "GPG_KEY=C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF",
+                "PYTHON_VERSION=2.7.15",
+                "PYTHON_PIP_VERSION=10.0.1"
+            ],
+            "Cmd": [
+                "supervisord",
+                "-n"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:f059272c1693d39df0d2d134671fef91c753ef085cc830508a16f9af41cc752e",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": [],
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1120620920,
+        "VirtualSize": 1120620920,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c9ed1d7610278c0a1cbee2a90c47a86e8bd6499540063905b8eb7f64f1f733be/diff:/var/lib/docker/overlay2/dad133adde438854b43a7ba75bb92916d2a961b722f40d0edefea0db65707c8b/diff:/var/lib/docker/overlay2/4d8dd7733f6b187f8228ea135302d33ef44a13676ec822c857f6fa48a2c4826c/diff:/var/lib/docker/overlay2/da88a59b45e59a57e1126dd3148af615aa7a245a7934f4f29a8b9b1866c68358/diff:/var/lib/docker/overlay2/58a32134d64a892addd55d059fa8472695f4078e09ee5e1053bb4eea0b269419/diff:/var/lib/docker/overlay2/251303c36f33e586f2f6391df410f44aa9fb99eceb44873e2f10e36e2b8ea9d5/diff:/var/lib/docker/overlay2/e62246923336d20a7a44f4cdb122e88d78234638f2737490bc7eaeff83f7e51a/diff:/var/lib/docker/overlay2/a1a9bf4d9522d9046713a9809c5b6cd6639f241e1792095bb4156bc69373b738/diff:/var/lib/docker/overlay2/a1db54b81b5fb02d3de0c7e8b76e7b05912b7250e8fe78ce43e6741ce001c044/diff:/var/lib/docker/overlay2/e99264ba521969950669037dede97e0137be2a7006bdbfa986d755c4ff243029/diff:/var/lib/docker/overlay2/2740c3c9643fa2d7b75056ad79a3e568c7c21a7499cd8b720fcaf56c95989284/diff:/var/lib/docker/overlay2/dc7d31c671b6fa4653dfe12118854abc8cd1b4f4921a518a46490cb313a83b1f/diff:/var/lib/docker/overlay2/2d8a5c4be2b51be7d0856d1e6a0430d09ffe03f666d48d18597a99fb91c1b7ae/diff:/var/lib/docker/overlay2/3fad9d2ddbfb978ee15f97eca3d9badea4fbdb08f41a31c9b20e717622f56c6f/diff:/var/lib/docker/overlay2/dd127400932dd6de1d7b6a59edba1885d0c1e150e9095979f99aa7d278ea4e57/diff:/var/lib/docker/overlay2/51c9908fef3f5e22dc2ca34ac3b2b5691282743cadafd68eb624f5d00b01c738/diff:/var/lib/docker/overlay2/fcf773e5b94d8615cfbc000423f13da74652cad699c4edb7b32682ca21f46ef9/diff:/var/lib/docker/overlay2/e5d9eee1f59583787aee8dd2b7055bfbb0d1267f09f7c6b7ce96f5a43bd55d19/diff:/var/lib/docker/overlay2/3573b4ef110ee95bc6d0b1805b2d82bcb927c10d110f134e92e0ddb0e86dc903/diff",
+                "MergedDir": "/var/lib/docker/overlay2/70cb47fc5d897f0e3f3813a41e82481f8840c7ac3c633e992273bb5a8a42d936/merged",
+                "UpperDir": "/var/lib/docker/overlay2/70cb47fc5d897f0e3f3813a41e82481f8840c7ac3c633e992273bb5a8a42d936/diff",
+                "WorkDir": "/var/lib/docker/overlay2/70cb47fc5d897f0e3f3813a41e82481f8840c7ac3c633e992273bb5a8a42d936/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:0f3a12fef684003e8dc0dfdcea32789db2179c6f9ad1e1e89bc05754ac44c6c5",
+                "sha256:3fa6e458af6f70a2041566be64b933d0d408d2ae36bd8ae155ceaaa39891e5b1",
+                "sha256:a130cc33ffce028c39d29223cd23f719ef4de32a38f90bc1a887fc6cb2b78777",
+                "sha256:4e2f09da8ad8a5c5bf16a483f7d7f5bdec648edac1ef1c7401ced9a252071f53",
+                "sha256:382b0665bca72a45a1bb64bd219edad1edef9bbbf57fc24a146ab661b3f416b7",
+                "sha256:503f69b746cf0e34f1e3af3de2ef9d1726e62a9035870f2d3116acdb4e4a5036",
+                "sha256:e10645c19820d7d310dc593e4c243e15369e230309f2df4b42bf424c65e915d7",
+                "sha256:45bf67184bbc4e51457108a26b6a937ee67f6fa7c09097ccba4b9c52fc41459a",
+                "sha256:67c18103247144605fc9cfd8957007172d5197ba8f745517c363190ef371703f",
+                "sha256:2603b625afb66d8f6b516a337920f45b3b197da42e4dd219646acc35ad798254",
+                "sha256:31a5611ad6159247571fe5decbf9c2de4d5a75a8bd271ef4953688b1c4ffa226",
+                "sha256:6c4ee0e1b80f9695bd319c6c698c37562488365c62a2b5ba52aa85e095f3214e",
+                "sha256:f74684518dfb175624f194577c4f7c18a5dac66e472d650e73af8433546c9e0b",
+                "sha256:3d8651b3f21432c6ca3cac1b65cbde6e0cf5cbf5980dbb2cb4d4aa1580c613db",
+                "sha256:2f64b87df9ed34fabb885a7d81887377626dac5a3db51d1d370e1ea3c10b7420",
+                "sha256:3ab594ca31f085caa12798c60e142f527c1ca0fa0b2c63e556dc780aafb84843",
+                "sha256:1ad25b271bdfbd6922ed8b998e20d385503edd0082c4eff29a95aec78d69ed69",
+                "sha256:b1b0443fb116edb2e208a3d50529715fbada3d2d64ac188519b9e84482adf3b2",
+                "sha256:3166aa7de10f5633bd254e8f2261dbea5f025141a74013ab3ab173ae269f6ece",
+                "sha256:0232b60b38b8bc2bf6a7529e6545298539cf77ce1ada953e45ea9e96e35466cc"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
