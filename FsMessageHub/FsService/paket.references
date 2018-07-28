@@ -1,0 +1,5 @@
+FSharp.Core
+Grpc
+Grpc.Tools
+Google.Protobuf
+Google.Protobuf.Tools
