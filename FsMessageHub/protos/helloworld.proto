@@ -1,2 +1,16 @@
 syntax = "proto3";
 
+package CsProto;
+
+service Greeter {
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+    rpc SayHelloAgain (stream HelloRequest) returns (stream HelloResponse);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
