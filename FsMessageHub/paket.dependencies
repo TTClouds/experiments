@@ -4,3 +4,6 @@ nuget Google.Protobuf
 nuget Google.Protobuf.Tools
 nuget Grpc
 nuget Grpc.Tools
+nuget Hopac
+
+github apache/incubator-pulsar pulsar-common/src/main/proto/PulsarApi.proto

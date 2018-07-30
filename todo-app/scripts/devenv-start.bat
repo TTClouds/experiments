@@ -1,0 +1,1 @@
+docker-compose -f deploy\devenv-docker-compose.yaml up
