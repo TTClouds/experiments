@@ -4,3 +4,5 @@ Grpc.Tools
 Google.Protobuf
 Google.Protobuf.Tools
 Hopac
+Froto.Parser
+Froto.Serialization

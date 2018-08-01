@@ -3,6 +3,8 @@ open System.Threading.Tasks
 open Grpc.Core
 open CsProto
 open System.Threading
+open Hopac
+open Hopac.Infixes
 
 type GreeterImpl() =
     inherit Greeter.GreeterBase()
@@ -29,8 +31,7 @@ type GreeterImpl() =
         let result = Async.StartAsTask(loop())
         result :> Task
 
-[<EntryPoint>]
-let main argv =
+let grpcTest() =
     let port = 50051
     let server = Server()
     do GreeterImpl() |> Greeter.BindService |> server.Services.Add
@@ -42,5 +43,20 @@ let main argv =
     do Console.ReadKey() |> ignore
 
     do server.ShutdownAsync().Wait()
+
+let hopacTest() =
+    let ch = Hopac.Ch()
+    let j = job {
+        let! x = Ch.take ch
+        return x + 1
+    }
+    let j2 = job {
+        do! Ch.give ch 41
+    }
+    j <*> j2 |> run |> fst
+
+[<EntryPoint>]
+let main argv =
+    printfn "The answer is: %d" (hopacTest())
 
     0 // return an integer exit code
