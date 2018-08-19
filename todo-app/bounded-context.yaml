@@ -1,0 +1,9 @@
+kind: BoundedContext
+apiVersion: dddclouds.com/v0alpha0
+metadata:
+  name: TodoApp
+spec:
+  selector:
+    domain: samples
+    name: TodoApp
+---
