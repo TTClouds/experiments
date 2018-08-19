@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Common.fs" />
+    <Compile Include="Validation.fs" />
+    <Compile Include="ValueTypes.fs" />
+    <Compile Include="Events.fs" />
+    <Compile Include="Commands.fs" />
+    <Compile Include="TodoListAggregate.fs" />
+    <Compile Include="TodoListView.fs" />
+    <Compile Include="TodoListStarterProc.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

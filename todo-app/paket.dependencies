@@ -1,0 +1,6 @@
+source https://api.nuget.org/v3/index.json
+
+nuget Chessie
+nuget FSharp.Core
+nuget Hopac
+nuget Newtonsoft.JSON

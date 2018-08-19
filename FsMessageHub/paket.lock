@@ -1,5 +1,12 @@
 NUGET
   remote: https://www.nuget.org/api/v2
+    FParsec (1.0.3)
+      FSharp.Core (>= 4.0.0.1) - restriction: >= net40
+      FSharp.Core (>= 4.2.3) - restriction: && (< net40) (>= netstandard1.6)
+      NETStandard.Library (>= 1.6.1) - restriction: && (< net40) (>= netstandard1.6)
+    Froto.Parser (0.6.1)
+      FParsec (>= 1.0.3)
+    Froto.Serialization (0.6.1)
     FSharp.Core (4.5.2)
       System.Collections (>= 4.0.11) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
       System.Console (>= 4.0) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
@@ -597,4 +604,4 @@ NUGET
       System.Xml.ReaderWriter (>= 4.3) - restriction: || (&& (< monoandroid) (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< monoandroid) (< net45) (>= netstandard1.0) (< netstandard1.3) (< win8) (< wp8) (< wpa81)) (< portable-net45+win8+wp8+wpa81)
 GITHUB
   remote: apache/incubator-pulsar
-    pulsar-common/src/main/proto/PulsarApi.proto (9d378978026b532386d89f7af3afc6997d3bff1c)
+    pulsar-common/src/main/proto/PulsarApi.proto (a57057a4c8932fffd155615da9115a50b90f5cf5)
