@@ -40,6 +40,10 @@ let execute state command =
     | Active _, DoArchive ->
         [ WasArchived ]
         |> ok
+    
+    | Archived, DoArchive ->
+        []
+        |> ok
 
     | _, _ ->
         fail ("", sprintf "Incompatible state %A to receive command %A" state command)

@@ -38,11 +38,18 @@ module Trial =
         | Bad es -> Bad(es)
     
     let mapWarning f = mapWarnings (fun es -> List.map f es)
-    
+
+module TrialInfix =
+    let inline (<<+>) a b = Trial.combine (fun a _ -> a) a b
+    let inline (<+>>) a b = Trial.combine (fun _ a -> a) a b
 
 module Converter =
     let result b : Converter<'a, 'b, 'e> = 
         fun _ -> Ok(b, [])
+
+    let resultWith ws b : Converter<'a, 'b, 'e> = 
+        fun _ -> Ok(b, ws)
+
     let resultErrors es : Converter<'a, 'b, 'e> = 
         fun _ -> Bad es
     let resultError e : Converter<'a, 'b, 'e> =
@@ -63,8 +70,10 @@ module Converter =
     let compose (ma: Converter<'a, 'b, 'e>) (mb: Converter<'b, 'c, 'e>) =
         bind mb ma
 
-    let combine (f: 'b -> 'c -> 'd) (cb: Converter<'a, 'b, 'e>) (cc: Converter<'a, 'c, 'e>): Converter<'a, 'd, 'e> = 
-        fun a -> Trial.combine f (cb a) (cc a)
+    let combine (f: 'b -> 'c -> 'd) (cb: Converter<'a, 'b, 'e>) (cc: Converter<'a, 'c, 'e>): Converter<'a, 'd, 'e> = fun a -> 
+        match cb a with
+        | Ok _ as b' -> Trial.combine f b' (cc a)
+        | Bad _ as b' -> Trial.combine f b' (Bad [])
     
     let mapMsgs f c = fun a -> c a |> Trial.mapMsgs f
     
@@ -89,6 +98,9 @@ module Tester =
     let pipe (next: Tester<'a, 'e>) (prev: Tester<'a, 'e>): Tester<'a, 'e> =
         Converter.combine (fun _ _ -> ()) prev next
 
+    let otherwise (next: Tester<'a, 'e>) (prev: Tester<'a, 'e>): Tester<'a, 'e> =
+        Converter.combine (fun _ b -> b) prev next
+
     let named name (tester: Tester<'a, _>): Validator<'a> =
         tester |> Converter.mapMsg (fun e -> name, e)
 
@@ -98,6 +110,11 @@ module Tester =
     let prefixed prefix =
         let prefixer p = sprintf "%s%s" prefix p
         prefixedWith prefixer
+
+module TesterInfix =
+    let inline (<&&>) prev next = prev |> Tester.pipe next
+    
+    let inline (<||>) prev next = prev |> Tester.otherwise next
 
 [<RequireQualifiedAccess>]
 module TestersI18N =
