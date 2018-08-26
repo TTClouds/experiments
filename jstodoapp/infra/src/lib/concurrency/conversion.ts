@@ -11,6 +11,11 @@ import {
 } from 'rxjs';
 import { first } from 'rxjs/operators';
 
+export type FuncOrValue<T> = T | ((...args: any[]) => T);
+
+export const getAsValue = <T>(funcOrValue: FuncOrValue<T>, ...args: any[]): T =>
+  typeof funcOrValue === 'function' ? funcOrValue.apply(undefined, args): funcOrValue;
+
 export type ConcurrentLike<T> = ObservableInput<T>; // Subscribable | PromiseLike | InteropObservable | ArrayLike | Iterable
 
 export function isObservable<T = any>(value: unknown): value is Observable<T> {
@@ -40,14 +45,33 @@ export function isArrayLike<T = any>(value: unknown): value is ArrayLike<T> {
 export function isInteropObservable<T = any>(
   value: unknown
 ): value is InteropObservable<T> {
-  return !!value && typeof (value as any)[Symbol.observable] === 'function';
+  return (
+    !!value &&
+    (typeof (value as any)[Symbol.observable] === 'function' ||
+      typeof (value as any)['@@observable'] === 'function')
+  );
 }
 
 export function isIterable<T = any>(value: unknown): value is Iterable<T> {
   return !!value && typeof (value as any)[Symbol.iterator] === 'function';
 }
 
-const matchUnknown = <R = unknown>(unknown?: (v: unknown) => R) => (
+export function isConcurrent<T = any>(
+  value: unknown
+): value is ConcurrentLike<T> {
+  return (
+    isObservable(value) ||
+    isSubscribable(value) ||
+    isInteropObservable(value) ||
+    isPromise(value) ||
+    isPromiseLike(value) ||
+    isIterable(value) ||
+    isArrayLike(value) ||
+    Array.isArray(value)
+  );
+}
+
+export const matchUnknown = <R = unknown>(unknown?: (v: unknown) => R) => (
   value: unknown
 ): R => {
   if (unknown) {
@@ -56,7 +80,7 @@ const matchUnknown = <R = unknown>(unknown?: (v: unknown) => R) => (
   throw new TypeError(`Unmatched case for: ${value}`);
 };
 
-const matchTest = <I = unknown, R = unknown>(
+export const matchTest = <I = unknown, R = unknown>(
   test: (value: unknown) => value is I,
   positive?: (s: I) => R,
   unknown?: (v: unknown) => R
@@ -158,6 +182,23 @@ export const matchConcurrent = <T = unknown, R = unknown>(cases: {
       return matchUnknown(cases.unknown)(value);
     }
   };
+};
+
+export const iterableOf = <T>(array: ArrayLike<T>): Iterable<T> => {
+  const iterable = Object.create(null);
+  function* iterate(): IterableIterator<T> {
+    const len = array.length;
+    // tslint:disable-next-line:no-let
+    for (let i = 0; i < len; i++) {
+      yield array[i];
+    }
+  }
+  Object.defineProperty(iterable, Symbol.iterator, {
+    enumerable: false,
+    writable: false,
+    value: () => iterate
+  });
+  return iterable;
 };
 
 export const toObservable = <T>(value: ConcurrentLike<T>): Observable<T> =>
