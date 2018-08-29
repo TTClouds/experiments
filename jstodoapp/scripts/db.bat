@@ -1,0 +1,1 @@
+docker exec -it todoapp_mongo_1 mongo

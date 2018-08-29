@@ -324,7 +324,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "VchIABVZSYACiDI4vGiM6Rr3IzjWlL0KcdF2vbT8pEMuRdKwOhwBnL4JhhRE8KyFOO4mohDQv9hpXczAxEdTUA==",
+      "sha512": "1lT4sZxJYb24X9jm4rhD92R5IuCZlRIrNENThM2wYlaKiNlrmEHCNAV2/cZfm21ewyul8+M9Yv8+RrA0sjpd7Q==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
@@ -334,13 +334,14 @@
         "lib/netstandard1.0/_._",
         "microsoft.netcore.platforms.2.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
+        "paket-installmodel.cache",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "sha512": "Pxi2swvPg08zYd5yjnfOjKjv/1v022ls/PXycCJt3wlEwEUbvSYHIzGJVde+DJRIWz6wgAs0s+VgaoNH+RwWfA==",
       "type": "package",
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
@@ -353,7 +354,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "TPuBxQJNsgkRIG7vTl9ZHdxkL3AweqxGACkuLbnu0JmwYol/8W4u/MDVwQd70Z3oh3uzbX66RDpWAWSS0hwbcA==",
+      "sha512": "g082DRIUUAVKTITnu9vG+QH9HqWNOtlWQ0pNKAuS4xpxsQ3t75T3tQDR3pDLKL2Sm42MrsYtBNE17AQrz0vMsg==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -476,7 +477,8 @@
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
-        "netstandard.library.nuspec"
+        "netstandard.library.nuspec",
+        "paket-installmodel.cache"
       ]
     },
     "System.Interactive.Async/3.2.0": {
@@ -500,7 +502,7 @@
       ]
     },
     "System.IO/4.3.0": {
-      "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "sha512": "aoK6k48BD5qZfs8972Dq7O7Lv+7NHtYroJ2kIwC6+1rRO3ImKmvH385/+DNPBtcMT8XvCEja0pA11Xb0OpEVJg==",
       "type": "package",
       "path": "system.io/4.3.0",
       "files": [
@@ -518,6 +520,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -579,7 +582,7 @@
       ]
     },
     "System.Reflection/4.3.0": {
-      "sha512": "KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "sha512": "oPXDNNNufIsyHRyJxRP6k7bEWZczMUG2bN+OkKqrjhL0pwytOCL0bXpEUk5OtGqwNxbOso3y3lpa02hArkgdnA==",
       "type": "package",
       "path": "system.reflection/4.3.0",
       "files": [
@@ -597,6 +600,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -658,7 +662,7 @@
       ]
     },
     "System.Reflection.Primitives/4.3.0": {
-      "sha512": "5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "sha512": "hxnXIZamtJ/rB5SsiFdP+jp1ic47b2/2LtFwf5hBPGKi0G8abNkHlnsvYeccVGYfyxPQpXiOT3I6Rid1W/7BIA==",
       "type": "package",
       "path": "system.reflection.primitives/4.3.0",
       "files": [
@@ -675,6 +679,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -713,7 +718,7 @@
       ]
     },
     "System.Runtime/4.3.0": {
-      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "sha512": "/FPPIYK+gz6rhwEBo7Ogv5Bluv4iPCgv/d/xR5U/0k257OFX+uEMwuwCwHqC/s5bkMp/mJZ6TdOCqcyed78GuQ==",
       "type": "package",
       "path": "system.runtime/4.3.0",
       "files": [
@@ -731,6 +736,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -803,7 +809,7 @@
       ]
     },
     "System.Runtime.Handles/4.3.0": {
-      "sha512": "OKiSUN7DmTWeYb3l51A7EYaeNMnvxwE249YtZz7yooT4gOZhmTjIn48KgSsw2k2lYdLgTKNJw/ZIfSElwDRVgg==",
+      "sha512": "QxjG7bdYj560HiGnHRo07eAlt/4kFqAohSBmoHgR70ySJygbKw3zHAbkO32ZN+Qx68S7Z5jgWeG8RiDrEu9D0Q==",
       "type": "package",
       "path": "system.runtime.handles/4.3.0",
       "files": [
@@ -816,6 +822,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net46/_._",
@@ -839,7 +846,7 @@
       ]
     },
     "System.Runtime.Loader/4.3.0": {
-      "sha512": "DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
+      "sha512": "KY0/uXWgZ1ojdxyB4JhPELab8yzTG9WxIccyxLh6E/KKsCPqEjsZLUTOiuen4cIuBsNWWEmfmsxK0ebgRDi0Vg==",
       "type": "package",
       "path": "system.runtime.loader/4.3.0",
       "files": [
@@ -869,7 +876,7 @@
       ]
     },
     "System.Text.Encoding/4.3.0": {
-      "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "sha512": "A6f8IR/BgpRa86UQZYyofAB8yZqbS95vfBw6jh2m/EHefGMdhcVXguxP1qoQ769r1kLWj3mhO7+dawnvSQrqoQ==",
       "type": "package",
       "path": "system.text.encoding/4.3.0",
       "files": [
@@ -886,6 +893,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -935,7 +943,7 @@
       ]
     },
     "System.Threading.Tasks/4.3.0": {
-      "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "sha512": "wvkmGaZgyElAdUe4cYh0VEDAj/AooaQmcm4GTPg0TyMs0NJ2AgTIAVcoltR44zWESV/CMEWYNLHqN9sF+2mRhw==",
       "type": "package",
       "path": "system.threading.tasks/4.3.0",
       "files": [
@@ -952,6 +960,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -1001,7 +1010,7 @@
       ]
     },
     "System.Threading.Thread/4.3.0": {
-      "sha512": "OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
+      "sha512": "SFEGCMVcfIqIxJ1jVT4qlrT0pqbIRPvW6KSFwN1WUi6AZU7qFvYZDyeM8G8q/qhRQo/3k/m089ejS0lMGjIhXA==",
       "type": "package",
       "path": "system.threading.thread/4.3.0",
       "files": [
@@ -1016,6 +1025,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net46/System.Threading.Thread.dll",
@@ -1039,7 +1049,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.3.0": {
-      "sha512": "k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
+      "sha512": "zQJvQFjvMQego2E6DF6TRKtNGQJmEf2D23wianuWBUZSH4v9xLF9P2phyxQ4PT9iR4499L5sOwGvYHY3II7Y5w==",
       "type": "package",
       "path": "system.threading.threadpool/4.3.0",
       "files": [
@@ -1054,6 +1064,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "paket-installmodel.cache",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net46/System.Threading.ThreadPool.dll",
@@ -1096,30 +1107,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iskan\\.nuget\\packages\\": {},
+    "C:\\Users\\isierra\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\GitHub\\ttclouds\\experiments\\FsMessageHub\\CsProto\\CsProto.csproj",
+      "projectUniqueName": "c:\\Dev\\github\\ttclouds\\experiments\\FsMessageHub\\CsProto\\CsProto.csproj",
       "projectName": "CsProto",
-      "projectPath": "D:\\Dev\\GitHub\\ttclouds\\experiments\\FsMessageHub\\CsProto\\CsProto.csproj",
-      "packagesPath": "C:\\Users\\iskan\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\GitHub\\ttclouds\\experiments\\FsMessageHub\\CsProto\\obj\\",
+      "projectPath": "c:\\Dev\\github\\ttclouds\\experiments\\FsMessageHub\\CsProto\\CsProto.csproj",
+      "packagesPath": "C:\\Users\\isierra\\.nuget\\packages\\",
+      "outputPath": "c:\\Dev\\github\\ttclouds\\experiments\\FsMessageHub\\CsProto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\iskan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\isierra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Dev\\nugets": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
