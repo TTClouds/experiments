@@ -3,7 +3,9 @@ source https://api.nuget.org/v3/index.json
 nuget Chessie
 nuget FSharp.Core
 nuget FsUnit
+nuget Giraffe >= 2.0.0
 nuget Hopac
+nuget Microsoft.AspNetCore.App >= 2.1.0
 nuget Microsoft.NET.Test.Sdk 15.7.2
 nuget Newtonsoft.JSON
 nuget nunit 3.10.1

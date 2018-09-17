@@ -1,0 +1,4 @@
+Microsoft.AspNetCore.App
+Giraffe
+FSharp.Core
+Microsoft.AspNetCore.WebSockets
