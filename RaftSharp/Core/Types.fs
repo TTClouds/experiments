@@ -1,4 +1,4 @@
-namespace RaftSharp.Core
+namespace RaftSharp.Core.Types
 
 type NodeId = NodeId of string
 type LogTerm = LogTerm of int
@@ -7,7 +7,7 @@ type LogEntry<'command> = LogEntry of 'command
 type PersistedLogEntry<'command> = PersistedLogEntry of 'command * LogTerm
 
 module PersistedLogEntry =
-  let create command term = PersistedLogEntry(command, term)
+  let create command term = PersistedLogEntry(command, LogTerm term)
 
 // Invoked by leader to replicate log entries (§5.3);
 // also used as heartbeat (§5.2).
@@ -28,29 +28,29 @@ type AppendEntriesRequest<'command> = {
 
 module AppendEntriesRequest =
   let term (r: AppendEntriesRequest<_>) =
-    r.term
+    r.term |> fun (LogTerm term) -> term
   let setTerm term (r: AppendEntriesRequest<_>) =
-    { r with term = term }
+    { r with term = LogTerm term }
   let leaderId (r: AppendEntriesRequest<_>) =
-    r.leaderId
+    r.leaderId |> fun (NodeId id) -> id
   let setLeaderId leaderId (r: AppendEntriesRequest<_>) =
-    { r with leaderId = leaderId }
+    { r with leaderId = NodeId leaderId }
   let prevLogIndex (r: AppendEntriesRequest<_>) =
-    r.prevLogIndex
+    r.prevLogIndex |> fun (LogIndex index) -> index
   let setPrevLogIndex prevLogIndex (r: AppendEntriesRequest<_>) =
-    { r with prevLogIndex = prevLogIndex }
+    { r with prevLogIndex = LogIndex prevLogIndex }
   let prevLogTerm (r: AppendEntriesRequest<_>) =
-    r.prevLogTerm
+    r.prevLogTerm |> fun (LogTerm term) -> term
   let setPrevLogTerm prevLogTerm (r: AppendEntriesRequest<_>) =
-    { r with prevLogTerm = prevLogTerm }
+    { r with prevLogTerm = LogTerm prevLogTerm }
   let leaderCommit (r: AppendEntriesRequest<_>) =
-    r.leaderCommit
+    r.leaderCommit |> fun (LogIndex index) -> index
   let setLeaderCommit leaderCommit (r: AppendEntriesRequest<_>) =
-    { r with leaderCommit = leaderCommit }
+    { r with leaderCommit = LogIndex leaderCommit }
   let entries (r: AppendEntriesRequest<_>) =
     r.entries
   let setEntries entries (r: AppendEntriesRequest<_>) =
-    { r with entries = entries }
+    { r with entries = entries |> Seq.map LogEntry |> Seq.toList }
   let appendEntries entries (r: AppendEntriesRequest<_>) =
     { r with entries = entries |> List.append r.entries }
 
@@ -80,9 +80,9 @@ type AppendEntriesResponse = {
 
 module AppendEntriesResponse =
   let term (r: AppendEntriesResponse) =
-    r.term
+    r.term |> fun (LogTerm term) -> term
   let setTerm term (r: AppendEntriesResponse) =
-    { r with term = term }
+    { r with term = LogTerm term }
   let success (r: AppendEntriesResponse) =
     r.success
   let setSuccess success (r: AppendEntriesResponse) =
@@ -168,44 +168,3 @@ module RequestVoteResponse =
 type NodeRequest<'command> =
   | AppendEntries of AppendEntriesRequest<'command>
   | RequestVote of RequestVoteRequest
-
-// Persistent state on all servers:
-// (Updated on stable storage before responding to RPCs)
-type PersistentNodeState<'command> = {
-    // latest term server has seen (initialized to 0 on first boot,
-    // increases monotonically)
-    currentTerm: LogTerm
-    // candidateId that received vote in current term (or null if none)
-    votedFor: NodeId
-    // log entries; each entry contains command for state machine,
-    // and term when entry was received by leader (first index is 1)
-    log: PersistedLogEntry<'command> list
-}
-
-// Volatile state on all servers:
-type VolatileNodeState = {
-    // index of highest log entry known to be committed
-    // (initialized to 0, increases monotonically)
-    commitIndex: LogTerm
-    // index of highest log entry applied to state machine
-    // (initialized to 0, increases monotonically)
-    lastApplied: LogIndex
-}
-
-// Volatile state on leaders:
-// (Reinitialized after election)
-type VolatileLeaderState = {
-    // for each server, index of the next log entry to send to that server
-    // (initialized to leader last log index + 1)
-    nextIndex: Map<NodeId, LogIndex>
-    // for each server, index of highest log entry known to be replicated on server
-    // (initialized to 0, increases monotonically)
-    matchIndex: Map<NodeId, LogIndex>
-}
-
-type NodeState<'command> = {
-  persistent: PersistentNodeState<'command>
-  state: VolatileNodeState
-  leader: VolatileLeaderState option
-}
-

@@ -1,3 +1,8 @@
 source https://api.nuget.org/v3/index.json
 
+nuget FSharp.Control.AsyncSeq
 nuget FSharp.Core
+nuget FsUnit
+nuget Microsoft.NET.Test.Sdk 15.7.2
+nuget nunit 3.10.1
+nuget NUnit3TestAdapter 3.10.0
